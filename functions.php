@@ -12,6 +12,7 @@
 namespace Praxleo;
 
 use Praxleo\Assets;
+use Praxleo\Menus;
 
 defined( 'ABSPATH' ) || exit;
 
@@ -37,7 +38,11 @@ final class Praxleo {
     }
 
     private function includes() {
-        // Classes are autoloaded via composer.
+        /**
+         * Include the Menus class and initialize it
+         * to register the menus when the theme is set up.
+         */
+        Menus::init();
     }
 
     private function init_hooks() {

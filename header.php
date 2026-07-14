@@ -11,14 +11,20 @@
 <header class="bg-rose-500">
     <div class="mx-auto max-w-350 px-5 py-4 flex">
         <a href="<?php echo home_url(); ?>" class="text-white font-bold text-xl">Praxleo</a>
-        <ul class="ml-auto flex space-x-4">
-            <li><a href="#" class="text-white hover:text-gray-200">Home</a></li>
-            <li><a href="#" class="text-white hover:text-gray-200">About</a></li>
-            <li><a href="#" class="text-white hover:text-gray-200">Services</a></li>
-            <li><a href="#" class="text-white hover:text-gray-200">Portfolio</a></li>
-            <li><a href="#" class="text-white hover:text-gray-200">Blog</a></li>
-            <li><a href="#" class="text-white hover:text-gray-200">Contact</a></li>
-        </ul>
+
+
+        <?php
+        // Display the primary menu if it exists    
+        if ( has_nav_menu( 'primary' ) ) {
+            wp_nav_menu( [
+                'theme_location' => 'primary',
+                'container'      => false,
+                'menu_class'     => 'ml-auto flex space-x-4',
+                'fallback_cb'    => false,
+            ] );
+        }
+        
+        ?>
     </div>
 </header>
 

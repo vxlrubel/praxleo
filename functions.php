@@ -11,6 +11,8 @@
 
 namespace Praxleo;
 
+use Praxleo\Assets;
+
 defined( 'ABSPATH' ) || exit;
 
 define( 'PRAXLEO_VERSION', wp_get_theme()->get( 'Version' ) );
@@ -23,28 +25,23 @@ require_once PRAXLEO_DIR . '/vendor/autoload.php';
 
 final class Praxleo {
 
-    /**
-     * The single instance of the class.
-     *
-     * @var Praxleo
-     */
     private static $instance;
 
-    /**
-     * Main Praxleo Instance.
-     *
-     * Ensures only one instance of Praxleo is loaded or can be loaded.
-     *
-     * @return Praxleo - Main instance.
-     */
     public static function instance() {
         if ( is_null( self::$instance ) ) {
             self::$instance = new self();
-            self::$instance->setup_constants();
             self::$instance->includes();
             self::$instance->init_hooks();
         }
         return self::$instance;
+    }
+
+    private function includes() {
+        // Classes are autoloaded via composer.
+    }
+
+    private function init_hooks() {
+        add_action( 'wp_enqueue_scripts', [ Assets::class, 'enqueue' ] );
     }
 }
 
@@ -59,3 +56,5 @@ if ( ! function_exists( 'praxleo' ) ) {
         return Praxleo::instance();
     }
 }
+
+praxleo();

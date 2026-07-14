@@ -8,6 +8,6 @@
 <body class="<?php body_class();?>">
 <?php wp_body_open(); ?>
     
-<header>
+<header class="bg-rose-500">
     header content
 </header>

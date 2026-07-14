@@ -7,7 +7,7 @@ class Admin {
     public static function init() {
         add_filter( 'manage_posts_columns', [ __CLASS__, 'add_featured_image_column' ] );
         add_action( 'manage_posts_custom_column', [ __CLASS__, 'display_featured_image_column' ], 10, 2 );
-        add_action( 'admin_head', [ __CLASS__, 'add_column_styles' ] );
+        add_action( 'admin_head', [ __CLASS__, 'add_column_styles' ], 100 );
     }
 
     public static function add_featured_image_column( $columns ) {
@@ -38,6 +38,13 @@ class Admin {
         $screen = get_current_screen();
         if ( 'post' !== $screen->id ) {
             return;
-        }
+        } ?>
+
+        <style>
+            .manage-column.column-featured_image {
+                width: 60px;
+            }
+        </style>
+        <?php
     }
 }

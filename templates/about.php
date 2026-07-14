@@ -6,3 +6,13 @@
  *
  * @package Praxleo
  */
+get_header();?>
+
+<section>
+    <h1>About Us</h1>
+    <div>
+        <?php the_content(); ?>
+    </div>
+</section>
+
+<?php get_footer();?>

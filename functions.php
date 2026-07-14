@@ -14,6 +14,7 @@ namespace Praxleo;
 use Praxleo\Assets;
 use Praxleo\Menus;
 use Praxleo\Setup;
+use Praxleo\Admin;
 
 defined( 'ABSPATH' ) || exit;
 
@@ -49,6 +50,13 @@ final class Praxleo {
          * theme setup
          */
         Setup::init();
+
+        /**
+         * Admin customizations
+         */
+        if ( is_admin() ) {
+            Admin::init();
+        }
     }
 
     private function init_hooks() {

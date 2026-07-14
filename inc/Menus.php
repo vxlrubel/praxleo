@@ -13,8 +13,9 @@ class Menus {
     public static function register_menus() {
         register_nav_menus(
             [
-                'primary' => __( 'Primary Menu', 'praxleo' ),
-                'footer'  => __( 'Footer Menu', 'praxleo' ),
+                'primary'   => __( 'Primary Menu', 'praxleo' ),
+                'secondary' => __( 'Secondary Menu', 'praxleo' ),
+                'footer'    => __( 'Footer Menu', 'praxleo' ),
             ]
         );
     }

@@ -1,0 +1,10 @@
+{
+    "name": "praxleo/theme",
+    "description": "Praxleo WordPress Theme",
+    "type": "wordpress-theme",
+    "autoload": {
+        "psr-4": {
+            "Praxleo\\": "inc/"
+        }
+    }
+}

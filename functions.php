@@ -19,6 +19,8 @@ define( 'PRAXLEO_URI', get_template_directory_uri() );
 
 
 
+require_once PRAXLEO_DIR . '/vendor/autoload.php';
+
 final class Praxleo {
 
     /**

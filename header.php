@@ -21,3 +21,5 @@
         </ul>
     </div>
 </header>
+
+<main class="min-h-100">

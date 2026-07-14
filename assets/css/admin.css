@@ -1,0 +1,12 @@
+:root {
+    --column-featured-image-width: 60px;
+    --column-featured-image-radious: 10px;
+}
+
+.column-featured_image {
+    width: var(--column-featured-image-width);
+    max-width: var(--column-featured-image-width);
+    img{
+        border-radius: var(--column-featured-image-radious);
+    }
+}

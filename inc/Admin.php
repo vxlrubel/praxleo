@@ -7,7 +7,7 @@ class Admin {
     public static function init() {
         add_filter( 'manage_posts_columns', [ __CLASS__, 'add_featured_image_column' ] );
         add_action( 'manage_posts_custom_column', [ __CLASS__, 'display_featured_image_column' ], 10, 2 );
-        add_action( 'admin_head', [ __CLASS__, 'add_column_styles' ], 100 );
+        add_action( 'admin_enqueue_scripts', [ __CLASS__, 'add_admin_styles' ] );
     }
 
     public static function add_featured_image_column( $columns ) {
@@ -34,17 +34,10 @@ class Admin {
         }
     }
 
-    public static function add_column_styles() {
-        $screen = get_current_screen();
-        if ( 'post' !== $screen->id ) {
-            return;
-        } ?>
+    public static function add_admin_styles(){
 
-        <style>
-            .manage-column.column-featured_image {
-                width: 60px;
-            }
-        </style>
-        <?php
+        wp_enqueue_style( 'admin-styles', get_template_directory_uri() . '/assets/css/admin.css' );
+
     }
+
 }

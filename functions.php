@@ -13,6 +13,7 @@ namespace Praxleo;
 
 use Praxleo\Assets;
 use Praxleo\Menus;
+use Praxleo\Setup;
 
 defined( 'ABSPATH' ) || exit;
 
@@ -43,6 +44,11 @@ final class Praxleo {
          * to register the menus when the theme is set up.
          */
         Menus::init();
+
+        /**
+         * theme setup
+         */
+        Setup::init();
     }
 
     private function init_hooks() {

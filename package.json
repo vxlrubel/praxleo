@@ -1,0 +1,13 @@
+{
+  "name": "praxleo/theme",
+  "version": "1.0.0",
+  "description": "Praxleo WordPress Theme",
+  "scripts": {
+    "dev": "tailwindcss -i ./src/input.css -o ./assets/css/style.css --watch",
+    "build": "tailwindcss -i ./src/input.css -o ./assets/css/style.css --minify"
+  },
+  "devDependencies": {
+    "tailwindcss": "^4.1.11",
+    "@tailwindcss/cli": "^4.1.11"
+  }
+}

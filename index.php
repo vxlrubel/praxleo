@@ -11,15 +11,16 @@ get_header(); ?>
 <section class="bg-[#FFF2EB] py-15">
     <div class="max-w-350 mx-auto px-5 py-4">
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 lg:gap-8">
-            <?php while(have_posts()) : the_post(); ?>
+            <?php $post_index = 0; while(have_posts()) : the_post(); ?>
+            <?php $loading = $post_index < 2 ? 'eager' : 'lazy'; ?>
             <a class="flex flex-col bg-white pb-4 rounded-2xl overflow-hidden" href="<?php the_permalink(); ?>">
                <span class="aspect-4/3 bg-amber-50 overflow-hidden">
-                 <img src="<?php the_post_thumbnail_url( 'medium' ); ?>" fetchpriority="high" loading="lazy" alt="<?php the_title(); ?>" class="w-full h-full object-cover">
+                 <img src="<?php the_post_thumbnail_url( 'medium' ); ?>" fetchpriority="high" loading="<?php echo $loading; ?>" alt="<?php the_title(); ?>" class="w-full h-full object-cover">
                </span>
                <span class="text-lg font-semibold px-4 py-1 line-clamp-1"><?php the_title(); ?></span>
                <span class="text-gray-600 line-clamp-2 px-4 pt-1"><?php the_excerpt(); ?></span>
             </a>
-            <?php endwhile; ?>
+            <?php $post_index++; endwhile; ?>
 
             <?php wp_reset_postdata(); ?>
 

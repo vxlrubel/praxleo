@@ -14,7 +14,7 @@ get_header(); ?>
             <?php while(have_posts()) : the_post(); ?>
             <a class="flex flex-col bg-white pb-4 rounded-2xl overflow-hidden" href="<?php the_permalink(); ?>">
                <span class="aspect-4/3 bg-amber-50 overflow-hidden">
-                 <img src="<?php the_post_thumbnail_url( 'medium' ); ?>" alt="<?php the_title(); ?>" class="w-full h-full object-cover">
+                 <img src="<?php the_post_thumbnail_url( 'medium' ); ?>" fetchpriority="high" loading="lazy" alt="<?php the_title(); ?>" class="w-full h-full object-cover">
                </span>
                <span class="text-lg font-semibold px-4 py-1 line-clamp-1"><?php the_title(); ?></span>
                <span class="text-gray-600 line-clamp-2 px-4 pt-1"><?php the_excerpt(); ?></span>

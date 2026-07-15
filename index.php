@@ -1,18 +1,16 @@
 <?php
 
-get_header();
+defined( 'ABSPATH' ) || exit('No direct script access allowed.');
 
-
-
-?>
+get_header(); ?>
 
 
 
 <?php if(have_posts()) : ?>
 
-<section class="bg-[#f0f0f0] py-15">
+<section class="bg-[#FFF2EB] py-15">
     <div class="max-w-350 mx-auto px-5 py-4">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 lg:gap-8">
             <?php while(have_posts()) : the_post(); ?>
             <a class="flex flex-col bg-white pb-4 rounded-2xl overflow-hidden" href="<?php the_permalink(); ?>">
                <span class="aspect-4/3 bg-amber-50 overflow-hidden">

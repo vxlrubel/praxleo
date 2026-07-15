@@ -52,6 +52,11 @@ final class Praxleo {
         Setup::init();
 
         /**
+         * Assets
+         */
+        Assets::init();
+
+        /**
          * Admin customizations
          */
         if ( is_admin() ) {
@@ -60,7 +65,7 @@ final class Praxleo {
     }
 
     private function init_hooks() {
-        add_action( 'wp_enqueue_scripts', [ Assets::class, 'enqueue' ] );
+        // Actions initialized in respective classes.
     }
 }
 

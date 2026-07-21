@@ -37,7 +37,7 @@
 
 <?php if ( has_nav_menu( 'secondary' ) ) : ?>
     <div id="offcanvas-overlay" class="fixed inset-0 bg-black/50 z-40 hidden"></div>
-    <aside id="offcanvas-menu" class="fixed top-0 left-0 h-full w-72 bg-white z-50 transform -translate-x-full transition-transform duration-300 shadow-xl">
+    <aside id="offcanvas-menu" class="fixed top-0 left-0 h-full w-72 bg-linear-to-r from-purple-100 to-theme-100 z-50 transform -translate-x-full transition-transform duration-300 shadow-xl">
         <div class="flex items-center justify-between px-5 py-4 border-b">
             <span class="font-bold text-lg">Menu</span>
             <button id="menu-close" class="text-gray-600 hover:text-black focus:outline-none" aria-label="Close menu">

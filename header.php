@@ -8,9 +8,9 @@
 <body class="<?php body_class();?>">
 <?php wp_body_open(); ?>
     
-<header class="bg-theme-500">
-    <div class="mx-auto max-w-350 px-5 py-4 flex items-center">
-        <a href="<?php echo home_url(); ?>" class="text-white font-bold text-xl">Praxleo</a>
+<header class="fixed top-8 left-0 right-0 z-50 px-5">
+    <div class="mx-auto max-w-350 px-5 py-4 flex items-center bg-linear-to-r from-purple-100 to-theme-100 rounded-[100px] shadow-lg">
+        <a href="<?php echo home_url(); ?>" class="text-gradient font-bold text-xl">Praxleo</a>
 
         <?php if ( has_nav_menu( 'primary' ) ) : ?>
             <nav class="ml-auto hidden lg:flex space-x-4">
@@ -26,7 +26,7 @@
         <?php endif; ?>
 
         <?php if ( has_nav_menu( 'secondary' ) ) : ?>
-            <button id="menu-toggle" class="ml-auto lg:hidden text-white focus:outline-none" aria-label="Open menu">
+            <button id="menu-toggle" class="ml-auto lg:hidden text-purple-500 focus:outline-none" aria-label="Open menu">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
                 </svg>

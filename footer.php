@@ -18,10 +18,10 @@
                     Our Services
                 </div>
                 <ul class="text-gray-500 space-y-1">
-                    <li><a href="#" class="hover:text-theme-500 hover:underline">Web Development</a></li>
-                    <li><a href="#" class="hover:text-theme-500 hover:underline">Mobile App Development</a></li>
-                    <li><a href="#" class="hover:text-theme-500 hover:underline">UI/UX Design</a></li>
-                    <li><a href="#" class="hover:text-theme-500 hover:underline">Digital Marketing</a></li>
+                    <li><a href="#" class="text-link">Web Development</a></li>
+                    <li><a href="#" class="text-link">Mobile App Development</a></li>
+                    <li><a href="#" class="text-link">UI/UX Design</a></li>
+                    <li><a href="#" class="text-link">Digital Marketing</a></li>
                 </ul>
             </div>
             <div>
@@ -39,7 +39,7 @@
                 <div class="font-semibold text-2xl text-gradient mb-3">
                     Pages
                 </div>
-                
+
                 <div class="flex flex-wrap gap-4">
                     <a href="#" class="footer-page-link">Home</a>
                     <a href="#" class="footer-page-link">About Us</a>

@@ -17,11 +17,36 @@
     font-style: italic;
     font-display: swap;
 }
-
 @theme {
     --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif;
+    --color-theme-50: oklch(97.5% 0.02 260);
+    --color-theme-100: oklch(94.5% 0.04 258);
+    --color-theme-200: oklch(88.5% 0.08 256);
+    --color-theme-300: oklch(80.5% 0.13 254);
+    --color-theme-400: oklch(71.5% 0.18 252);
+    --color-theme-500: oklch(63.5% 0.22 250);
+    --color-theme-600: oklch(57.5% 0.24 248);
+    --color-theme-700: oklch(50.5% 0.21 246);
+    --color-theme-800: oklch(44.5% 0.18 244);
+    --color-theme-900: oklch(39.5% 0.15 242);
+    --color-theme-950: oklch(27.5% 0.1 240);
+}
+*::selection {
+  @apply bg-theme-500 text-white;
 }
 
 body {
     font-family: var(--font-sans);
+}
+
+.input-field {
+  @apply w-full select-none text-sm px-3 border-2 border-gray-300 py-2 outline-0 focus:border-theme-500 focus:text-theme-500 focus:bg-theme-50 focus:ring-2 focus:ring-theme-300 focus:ring-offset-1 font-semibold inline-flex items-center justify-center rounded disabled:bg-gray-200 disabled:text-gray-400 disabled:cursor-not-allowed disabled:select-none transition-colors duration-200;;
+}
+
+.button-primary {
+  @apply text-white select-none text-sm px-5 py-2 outline-0 hover:bg-theme-600 focus:ring-2 focus:ring-theme-300 focus:ring-offset-1 focus:bg-theme-500 font-semibold inline-flex items-center justify-center rounded bg-theme-500 cursor-pointer disabled:bg-gray-200 disabled:text-gray-400 disabled:cursor-not-allowed disabled:select-none transition-colors duration-200;
+}
+
+.text-gradient {
+  @apply bg-linear-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent;
 }

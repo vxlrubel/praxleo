@@ -8,7 +8,7 @@
 <body class="<?php body_class();?>">
 <?php wp_body_open(); ?>
     
-<header class="bg-rose-500">
+<header class="bg-theme-500">
     <div class="mx-auto max-w-350 px-5 py-4 flex items-center">
         <a href="<?php echo home_url(); ?>" class="text-white font-bold text-xl">Praxleo</a>
 

@@ -50,3 +50,6 @@ body {
 .text-gradient {
   @apply bg-linear-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent;
 }
+.footer-page-link {
+  @apply inline-flex items-center rounded-lg bg-linear-to-r from-blue-500 to-purple-600 px-4 py-2 text-sm font-medium text-white shadow-md transition-all duration-300 ease-out hover:-translate-y-0.5 hover:from-blue-600 hover:to-purple-700 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 active:translate-y-0 active:scale-95;
+}

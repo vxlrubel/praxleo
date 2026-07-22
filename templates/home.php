@@ -36,7 +36,7 @@ get_header();?>
                 <span class="text-gradient text-lg">Workflow Process</span>
                 <h2 class="text-lg md:text-xl lg:text-2xl mt-4 text-balance">Our structured workflow ensures a smooth process from concept to completion, delivering projects on time and within budget.</h2>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-7.5">
                 <div class="bg-theme-500 p-5 lg:p-10 text-white rounded-xl transition-all duration-300 ease hover:-translate-y-2 hover:shadow-lg">
                     <span class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-white text-purple-500">
                         <svg xmlns="http://www.w3.org/2000/svg" height="35px" viewBox="0 -960 960 960" width="35px" fill="currentColor">

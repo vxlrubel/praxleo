@@ -39,7 +39,7 @@
 
 <?php if ( has_nav_menu( 'secondary' ) ) : ?>
     <div id="offcanvas-overlay" class="fixed inset-0 bg-black/5 z-40 hidden"></div>
-    <aside id="offcanvas-menu" class="fixed top-0 left-0 h-full w-72 bg-white/10  backdrop-blur-[5px] z-50 transform -translate-x-full transition-transform duration-300 shadow-xl">
+    <aside id="offcanvas-menu" class="fixed top-0 left-0 h-full w-72 bg-white/20  backdrop-blur-[5px] z-50 transform -translate-x-full transition-transform duration-300 shadow-xl">
         <div class="flex items-center justify-between px-5 py-4 border-b border-purple-300">
             <a href="<?php echo home_url(); ?>" class="font-bold text-lg">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.png" alt="praxleo logo" class="w-30 inline-block mr-2">

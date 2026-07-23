@@ -20,12 +20,12 @@ get_header();?>
                 </p>
 
                 <div class="flex gap-5 flex-wrap">
-                    <a href="<?php echo esc_url(home_url('/contact')); ?>" class="button-primary">Get Started</a>
-                    <a href="<?php echo esc_url(home_url('/services')); ?>" class="button-outline-primary">Our Services</a>
+                    <a href="<?php echo esc_url(home_url('/contact')); ?>" aria-label="get started" class="button-primary">Get Started</a>
+                    <a href="<?php echo esc_url(home_url('/services')); ?>" aria-label="our services" class="button-outline-primary">Our Services</a>
                 </div>
             </div>
             <div class="flex-1 order-1 md:order-2">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/home-hero-image.webp" fetchpriority="high" alt="Home" class="w-full max-w-[500px] block mx-auto mix-blend-multiply">
+                <img src="<?php echo get_image_source('home-hero-image.webp'); ?>" fetchpriority="high" height="auto" width="700" alt="Home" class="w-full max-w-[500px] block mx-auto mix-blend-multiply">
             </div>
         </div>
     </section>
@@ -65,6 +65,62 @@ get_header();?>
                     <p>Coding and implementation occur here, adhering to best practices and standards.</p>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <section class="py-10 lg:py-15 bg-theme-50">
+        <div class="container">
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-5 lg:gap-10">
+                <div class="flex-1">
+                    <h3>
+                        <span class="font-bold text-2xl text-gradient"> Core Features</span>
+                    </h3>
+                    <p class="text-balance mt-3">
+                        Our services come with a range of innovative features designed to maximize your business potential.
+                    </p>
+
+                    <div class="flex gap-4 items-start mt-10">
+                        <div class="w-15 text-theme-500">
+                            <div class="border-3 border-theme-500 rounded-full h-15 w-15 flex items-center justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="35px" viewBox="0 -960 960 960" width="35px" fill="currentColor">
+                                    <path d="M120-120v-520h200v-200h520v720H120Zm520-80h120v-560H400v120h240v440Zm-240 0h160v-360H400v360Zm-200 0h120v-360H200v360Zm440-440v80-80Zm-320 80Zm240 0Zm80-80Z"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="font-semibold text-lg leading-none mb-2">Responsive Design</h3>
+                            <p class="text-balance">
+                                Our web solutions are fully responsive, ensuring an optimal user experience on all devices.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4 items-start mt-6">
+                        <div class="w-15 text-theme-500">
+                            <div class="border-3 border-theme-500 rounded-full h-15 w-15 flex items-center justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="35px" viewBox="0 -960 960 960" width="35px" fill="currentColor">
+                                    <path d="M120-120v-520h200v-200h520v720H120Zm520-80h120v-560H400v120h240v440Zm-240 0h160v-360H400v360Zm-200 0h120v-360H200v360Zm440-440v80-80Zm-320 80Zm240 0Zm80-80Z"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="font-semibold text-lg leading-none mb-2">Scalable Solutions</h3>
+                            <p class="text-balance">
+                                We build scalable solutions that <br> grow with your business requirements.
+                            </p>
+                        </div>
+                    </div>
+
+                    <a href="<?php echo esc_url(home_url('/services')); ?>" class="button-primary mt-10 hover:-translate-y-1 transition-transform duration-200 ease">
+                        Learn More
+                    </a>
+                </div>
+                <div class="flex-1">
+                    <img src="<?php echo get_image_source('core-feature.webp'); ?>" height="auto" width="700" fetchpriority="high" alt="core-feature" loading="lazy" class="w-full block mx-auto">
+                </div>
+            </div>
+            
+            
         </div>
     </section>
 

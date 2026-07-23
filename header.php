@@ -9,18 +9,19 @@
 <?php wp_body_open(); ?>
     
 <header class="fixed top-8 left-0 right-0 z-30 px-5">
-    <div class="mx-auto max-w-350 px-5 py-4 flex items-center bg-linear-to-r from-purple-100 to-theme-100 rounded-[100px] shadow-lg">
+    <div class="mx-auto max-w-350 px-5 py-4 flex items-center bg-white/50 backdrop-blur-[10px] rounded-[100px] main-header">
         <a href="<?php echo home_url(); ?>" class="text-gradient font-bold text-xl">
             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.png" alt="praxleo logo" class="w-30 inline-block mr-2">
         </a>
 
         <?php if ( has_nav_menu( 'primary' ) ) : ?>
-            <nav class="ml-auto hidden lg:flex space-x-4">
+            <nav class="ml-auto hidden lg:flex space-x-4 menu-wrapper">
+                <div class="menu-indicator"></div>
                 <?php
                 wp_nav_menu( [
                     'theme_location' => 'primary',
                     'container'      => false,
-                    'menu_class'     => 'flex space-x-4',
+                    'menu_class'     => 'flex space-x-3',
                     'fallback_cb'    => false,
                 ] );
                 ?>

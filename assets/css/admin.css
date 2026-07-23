@@ -10,3 +10,24 @@
         border-radius: var(--column-featured-image-radious);
     }
 }
+
+a[href="praxleo"]{
+    .wp-menu-image{
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        img{
+            height: 20px;
+            width: 30px;
+            padding: 0 !important;
+        }
+    }
+
+    &:hover{
+        .wp-menu-image{
+            img{
+                filter: grayscale(1) brightness(10);
+            }
+        }
+    }
+}

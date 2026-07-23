@@ -25,6 +25,13 @@ class Assets {
 
         // custom script
         wp_enqueue_script( 'praxleo-script', PRAXLEO_URI . '/assets/js/script.js', array(), PRAXLEO_VERSION, true );
+
+        // subscribe script
+        wp_enqueue_script( 'praxleo-subscribe', PRAXLEO_URI . '/assets/js/subscribe.js', array(), PRAXLEO_VERSION, true );
+        wp_localize_script( 'praxleo-subscribe', 'praxleoSubscribe', [
+            'restUrl' => rest_url( 'praxleo/v1/subscribe' ),
+            'nonce'   => wp_create_nonce( 'wp_rest' ),
+        ] );
     }
 
     public static function remove_admin_styles() {

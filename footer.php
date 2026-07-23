@@ -50,26 +50,30 @@
             </div>
         </div>
         <div>
-            <form class="py-4 px-5 bg-linear-to-r from-purple-100 to-theme-100 rounded" action="javascript:void(0)" method="post">
+            <form id="praxleo-subscribe-form" class="py-4 px-5 bg-linear-to-r from-purple-100 to-theme-100 rounded" action="javascript:void(0)" method="post">
                 <div class="font-semibold text-2xl text-gradient mb-2">
                     Subscribe Us
                 </div>
                 <div class="text-sm mb-3 text-gray-500">Subscribe to our newsletter to stay updated with the latest news and offers.</div>
                 <input 
                     type="email"
+                    name="email"
                     placeholder="Enter your email"
                     class="input-field mb-3 lowercase placeholder:capitalize bg-white"
                     required
                 />
-                <button class="button-primary">Subscribe</button>
+                <button type="submit" class="button-primary">Subscribe</button>
+
+                <div class="subscribe-success mt-3 py-2 px-3 bg-green-50 border-l-4 border-green-500 text-green-500 text-sm hidden">
+                    You have been subscribed successfully.
+                </div>
+
+                <div class="subscribe-error mt-3 py-2 px-3 bg-rose-50 border-l-4 border-rose-500 text-rose-500 text-sm hidden">
+                    Invalid email address. Please enter a valid email.
+                </div>
 
                 <div class="mt-3 py-2 px-3 bg-theme-50 border-l-4 border-theme-500 text-theme-500 text-sm">
                     We respect your privacy. Unsubscribe at any time.
-                </div>
-
-                <!-- error mmessage -->
-                <div class="mt-3 py-2 px-3 bg-rose-50 border-l-4 border-rose-500 text-rose-500 text-sm">
-                    Invalid email address. Please enter a valid email.
                 </div>
             </form>
         </div>

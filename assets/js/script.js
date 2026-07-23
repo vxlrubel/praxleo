@@ -23,17 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
     overlay.addEventListener('click', closeMenu);
 
 
-
-
-
-
-
-
-
-
-
-
-
+    // move menu indecator
     const imenu = document.querySelector("#menu-primacy-and-secondary");
     const indicator = document.querySelector(".menu-indicator");
 

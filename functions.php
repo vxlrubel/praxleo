@@ -15,6 +15,10 @@ use Praxleo\Assets;
 use Praxleo\Menus;
 use Praxleo\Setup;
 use Praxleo\Admin;
+use Praxleo\Database;
+use Praxleo\Subscriber;
+use Praxleo\Admin\Subscribe;
+use Praxleo\Api\SubscriberAPI;
 
 defined( 'ABSPATH' ) || exit;
 
@@ -59,10 +63,21 @@ final class Praxleo {
         Assets::init();
 
         /**
+         * Database
+         */
+        Database::init();
+
+        /**
+         * REST API
+         */
+        SubscriberAPI::init();
+
+        /**
          * Admin customizations
          */
         if ( is_admin() ) {
             Admin::init();
+            Subscribe::init();
         }
     }
 

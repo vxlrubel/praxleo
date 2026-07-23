@@ -68,10 +68,10 @@ get_header();?>
         </div>
     </section>
 
-    <section class="py-10 lg:py-15 bg-theme-0">
+    <section class="py-10 lg:py-15">
         <div class="container">
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-5 lg:gap-10">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-5 lg:gap-10 items-center">
                 <div class="flex-1">
                     <h3>
                         <span class="font-bold text-2xl text-gradient"> Core Features</span>
@@ -162,6 +162,45 @@ get_header();?>
         </div>
     </section>
 
+    <section class="py-10 lg:py-15 bg-[#91d8ff]">
+        <div class="container">
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-5 lg:gap-10 items-center">
+                <div class="flex-1">
+                    <img src="<?php echo get_image_source('happy-clients.webp'); ?>" height="auto" width="700" fetchpriority="high" alt="core-feature" loading="lazy" class="w-full block mx-auto">
+                </div>
+                <div class="flex-1">
+                    <h3 class="font-bold text-2xl">
+                        Our Happy Clients
+                    </h3>
+                    <p class="text-balance mt-3">
+                       We measure success through proven results, trusted partnerships, and consistently delivering high-quality projects.
+                    </p>
+
+                    <div class="flex gap-4 mt-10 max-w-112.5">
+                        <div class="flex-1 bg-[#aae1ff] p-3 rounded-lg">
+                            <div class="font-bold text-2xl">7+</div>
+                            <p>Years of <br> Experience</p>
+                        </div>
+                        <div class="flex-1 bg-[#aae1ff] p-3 rounded-lg">
+                            <div class="font-bold text-2xl">250+</div>
+                            <p>Satisfied Clients</p>
+                        </div>
+                        <div class="flex-1 bg-[#aae1ff] p-3 rounded-lg">
+                            <div class="font-bold text-2xl">75+</div>
+                            <p>Projects Completed</p>
+                        </div>
+                    </div>
+
+                    <a href="<?php echo esc_url(home_url('/services')); ?>" class="button-primary mt-10 hover:-translate-y-1 transition-transform duration-200 ease">
+                        Learn More
+                    </a>
+                </div>
+            </div>
+            
+            
+        </div>
+    </section>
 
 </main>
 
